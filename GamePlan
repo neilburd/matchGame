@@ -1,0 +1,45 @@
+create a match game
+
+technologies to use?
+html javascript
+
+  do I use react or vue
+
+back end should I use Rails for now
+  then possibly use
+
+
+
+start screen
+  asks how many squares you wan tot play
+
+Game screen
+  small side panel with rules
+    can be used to display info or questions for future games
+    // holds the restart button
+        //// Does end of game take you back to the home screen
+    * shows score or how many squares
+        // scoring is based on how many boards you complete
+          //
+  large game board area
+    a grid of ???
+      numbers
+      letters
+      words
+      images
+      svgs??
+      colors
+
+thats the basic layout
+
+-----   GAME PLAY -----
+  select Game
+    numbers
+    colors
+    images basic image match?? would I eaven want to do this?
+            different memes??? NONONONONON
+            famous art
+            letters in real life
+
+    svgs /// it would be very light weight and give me a chance to do something fun
+              @@@ small svg animations in each one??????

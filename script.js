@@ -64,6 +64,8 @@ function shuffle(a) {
     }
 }
 
+
+
 /// I need to create the board
 
   /// thinking of having adding html elements using jquery based on the number
