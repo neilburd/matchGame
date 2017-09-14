@@ -1,9 +1,11 @@
-import "shuffled.js"
+//import "shuffled.js"
 
 $(document).ready(function() {
 
-  for (i=0; i > 16; i++){
-    $(#game).html(`<div class="item">${i}</div>`)
+  for (i = 1; i < 17; i++){
+    console.log(i);
+    $(".game").append(`<div class="item">${i}</div>`)
+
   }
 
 });
