@@ -1,24 +1,30 @@
 
 body{
-  margin:50px;
+
 }
 .game {
   display: grid;
-  grid-template-columns: 100px 100px 100px 100px;
-  grid-gap: 10px;
+  grid-template-columns: 20vw 20vw 20vw 20vw;
+  grid-gap: 2vw;
   background-color: #fff;
   color: #444;
+
+  margin-left: 5vw;
+  margin-right: 7vw;
   margin-top: 50px;
 }
 .item {
   background-color: #444;
   color: #fff;
   border-radius: 5px;
-  padding: 20px;
+  padding: 2vh;
   font-size: 150%;
+  text-align: center;
+
 }
 
 form {
+  margin: 50px 7vw 0 5vw;
   padding: 10px;
   background-color: red;
 }
