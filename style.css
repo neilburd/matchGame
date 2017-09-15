@@ -8,11 +8,17 @@ body{
   grid-gap: 10px;
   background-color: #fff;
   color: #444;
+  margin-top: 50px;
 }
-.item{
+.item {
   background-color: #444;
   color: #fff;
   border-radius: 5px;
   padding: 20px;
   font-size: 150%;
+}
+
+form {
+  padding: 10px;
+  background-color: red;
 }
