@@ -19,9 +19,9 @@ $(document).ready(function() {
     createBoard(boardSize);
     console.log(pairs);
 
-    for (i = 1; i < (pairs.length + 1); i++){
+    for (i = 0; i < pairs.length; i++){
       console.log(i);
-      $(".game").append(`<div class="item">${i}</div>`)
+      $(".game").append(`<div class="item">${pairs[i]}</div>`)
 
     }
 
