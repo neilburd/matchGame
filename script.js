@@ -6,14 +6,13 @@ $(document).ready(function() {
   event.preventDefault();
   });
 
-  $('#inputSubmit').click(function() {
-    // if (pairs.length > 1){
-    //   clearAll();
-    // }
-    $(".game").empty();
-    pairs = [];
+  $('#gridSubmit').click(function() {
 
-    let boardSize = $("#inputNumber").val();
+    pairs = [];
+    $('.game').empty();
+
+
+    let boardSize = $("input[name='gridSize']:checked").val();
 
     // console.log(boardSize);
     createBoard(boardSize);
