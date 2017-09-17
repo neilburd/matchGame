@@ -20,7 +20,14 @@ body{
   padding: 2vh;
   font-size: 150%;
   text-align: center;
+}
 
+.reveal {
+  color:#444;
+}
+
+.match {
+  background-color: #fff;
 }
 
 form {

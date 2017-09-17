@@ -16,22 +16,55 @@ $(document).ready(function() {
 
     // console.log(boardSize);
     createBoard(boardSize);
-    console.log(pairs);
+    // console.log(pairs);
 
     for (i = 0; i < pairs.length; i++){
-      console.log(i);
-      $(".game").append(`<div class="item">${pairs[i]}</div>`)
+      // console.log(i);
+      $(".game").append(`<div class="item" data-gridSize="${pairs[i]}">${pairs[i]}</div>`)
+    }
+  });
 
+  let match = null;
+
+////ALL THE CLICK AND GAME PLAY
+
+  $(".game").on("click",".item",function(){
+    let $this = $(this);
+    let number = $this.attr('data-gridSize');
+
+    console.log($this);
+    $this.addClass('.reveal');
+
+    if (match === null){
+      match = number;
+      //make this square unclickable after clicked once
+    } else if (match === number) {
+      console.log("match");
+      //this is where i put the actions for a match
+
+      match = null;
+    } else {
+      console.log('NO match');
+      /// this is where I put the actions for no match
+
+      match = null;
     }
 
-  });
+  })
+
+  function isMatch(a,b){
+    if (a === b){
+      return true
+    }
+    else return false
+  }
+
 
   function clearAll() {
 
-    console.log("remove" + i);
+    // console.log("remove" + i);
     pairs = [];
   }
-
   //function to test if number is Even
   function isEven(n) {
     return n == parseFloat(n)? !(n%2) : void 0;
@@ -52,10 +85,6 @@ $(document).ready(function() {
       shuffle(pairs);
 
     }
-
-
-
-
   function shuffle(a) {
       var j, x, i;
       for (i = a.length; i; i--) {
