@@ -24,7 +24,7 @@ $(document).ready(function() {
     shuffleArray(boardSize);
     for (i = 0; i < pairsArray.length; i++){
       // console.log(i);
-      $(".game").append(`<div class="item" data-gridSize="${pairsArray[i]}">${pairsArray[i]}</div>`)
+      $(".game").append(`<div class="item" id="tileId_${pairsArray[i]}" data-gridSize="${pairsArray[i]}">${pairsArray[i]}</div>`)
     }
   });
 
@@ -34,8 +34,10 @@ $(document).ready(function() {
 
     let $this = $(this);
     let number = $this.attr('data-gridSize');
+    let tile_Id = event.target.id;
 
-    console.log($this);
+    //console.log(event.target.id);
+
     $this.addClass('reveal');
 
     // tilesId = [];
@@ -52,58 +54,45 @@ $(document).ready(function() {
 
       if (matches.length === 0){
         matches.push(number);
-        /// do I need the ID
+        tilesId.push('#' + tile_Id);
+
         console.log("first item")
+
       } else if (matches.length === 1){
         matches.push(number);
-        /// do I need the ID
-        console.log("second item")
+        tilesId.push('#' + tile_Id);
+
+        console.log("second item");
+        ///MATCH
         if (matches[0] === matches[1]){
           tilesFlipped +=2;
           matches = [];
+          tilesId = [];
+
           console.log("MATCH")
+          /// CHECK FOR END OF GAME
           if (tilesFlipped === pairsArray.length){
             alert("YOU WON");
           }
-        } else {
+        }
+        //// NO MATCH
+        else {
+          console.log(tilesId);
+          console.log("NO MATCH");
+
+          $(tilesId[0]).removeClass('reveal');
+          $(tilesId[1]).removeClass('reveal');
+
+          console.log("reset");
           matches = [];
-          console.log("NO MATCH")
+          tilesId = [];
+
         }
       }
 
 
     }
   });
-  //   ///// MATCH /////
-  //   else if (match === number) {
-  //     //this is where i put the actions for a match
-  //
-  //     console.log("second click ---- match");
-  //     ///make this one unclickable
-  //     $this.click(false);
-  //
-  //     $('.item').each(function(index, val) {
-  //       ///val is the entire html line
-  //
-  //       console.log($(this).attr('data-gridSize'));
-  //       if ($(this).attr('data-gridSize') === number){
-  //         //add class to all the items that match the number??
-  //         $(this).addClass('match');
-  //       }
-  //
-  //     });
-  //
-  //     match = null;
-  //   } else {
-  //     console.log('second click ----- NO match');
-  //     /// this is where I put the actions for no match
-  //     // will have to rebind the click to each item
-  //
-  //     match = null;
-  //   }
-  //
-  // })
-
 
 
 

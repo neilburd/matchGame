@@ -25,6 +25,9 @@ body{
 .reveal {
   color:#333;
 }
+.test {
+  background-color: blue;
+}
 
 .match {
   background-color: #fff;
