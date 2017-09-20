@@ -24,7 +24,7 @@ $(document).ready(function() {
     shuffleArray(boardSize);
     for (i = 0; i < pairsArray.length; i++){
       // console.log(i);
-      $(".game").append(`<div class="item" id="tileId_${pairsArray[i]}" data-gridSize="${pairsArray[i]}">${pairsArray[i]}</div>`)
+      $(".game").append(`<div class="item" id="tileId_${i}" data-gridSize="${pairsArray[i]}">${pairsArray[i]}</div>`)
     }
   });
 
@@ -66,6 +66,7 @@ $(document).ready(function() {
         ///MATCH
         if (matches[0] === matches[1]){
           tilesFlipped +=2;
+
           matches = [];
           tilesId = [];
 
