@@ -77,16 +77,14 @@ $(document).ready(function() {
         }
         //// NO MATCH
         else {
-          console.log(tilesId);
-          console.log("NO MATCH");
+          flipBack();
+          // console.log(tilesId);
+          //console.log("NO MATCH");
 
-          $(tilesId[0]).removeClass('reveal');
-          $(tilesId[1]).removeClass('reveal');
-
-          console.log("reset");
+          //console.log("reset");
           matches = [];
           tilesId = [];
-
+          console.log(tilesId);
         }
       }
 
@@ -94,7 +92,15 @@ $(document).ready(function() {
     }
   });
 
+  function flipBack(){
+    //console.log(tilesId[0]);
+    $(tilesId[0]).removeClass('reveal');
 
+    //console.log(tilesId[1]);
+    $(tilesId[1]).removeClass('reveal');
+
+
+  }
 
   function clearAll() {
     pairsArray = [];
