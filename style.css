@@ -15,7 +15,7 @@ body{
 }
 .item {
   background-color: #444;
-  color: #fff;
+  color: #444;
   border-radius: 5px;
   padding: 2vh;
   font-size: 150%;
@@ -23,7 +23,7 @@ body{
 }
 
 .reveal {
-  color:#333;
+  color:#fff;
 }
 .test {
   background-color: blue;

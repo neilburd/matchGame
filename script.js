@@ -40,14 +40,6 @@ $(document).ready(function() {
 
     $this.addClass('reveal');
 
-    // tilesId = [];
-    // matches = [];
-    // tilesFlipped = 0;
-
-    // //make this square unclickable after clicked once
-    // $this.click(false);
-
-
     ////CHECK FOR MATCH
     /// if htere are less than 2 in the match arrray
     if (matches.length < 2){
@@ -78,13 +70,9 @@ $(document).ready(function() {
         }
         //// NO MATCH
         else {
-          flipBack();
-          // console.log(tilesId);
-          //console.log("NO MATCH");
 
-          //console.log("reset");
-          matches = [];
-          tilesId = [];
+          setTimeout(flipBack,500);
+
           console.log(tilesId);
         }
       }
@@ -94,12 +82,15 @@ $(document).ready(function() {
   });
 
   function flipBack(){
+    console.log("flip Back");
     //console.log(tilesId[0]);
     $(tilesId[0]).removeClass('reveal');
 
     //console.log(tilesId[1]);
     $(tilesId[1]).removeClass('reveal');
 
+    matches = [];
+    tilesId = [];
 
   }
 
